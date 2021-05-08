@@ -1,21 +1,43 @@
 .portfolio{
-  padding-top:94px;
-  @extend %section-padding;
+ padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 }
 
 /*buttons*/
 .portfolio__button-list{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px;
+
+@media screen and (min-width: 768px) {
   justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
   margin-bottom: 50px;
+}
 }
 
 .portfolio__button-item {
   margin-right: 8px;
-}
 
+    @media screen and (max-width: 767.98px) {
+    padding-bottom: 15px;
+  }
+}
 .portfolio__button-item:last-child{
   margin-right: 0;
+}
+
+.portfolio__button-item:nth-child(n+4){
+  padding-bottom: 0;
 }
 
 .portfolio__button{
@@ -43,8 +65,21 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 .portfolio__item{
   cursor: pointer;
   flex-wrap: wrap;
+  border-right: 1px solid #EEEEEE;
+border-left: 1px solid #EEEEEE;
+border-bottom: 1px solid #EEEEEE;
   transition: box-shadow var(--animation);
-   --grid__item: 3;
+  
+   --grid__item: 1;
+
+
+   @media screen and (min-width: 768px) {
+     --grid__item: 2;
+   }
+
+   @media screen and (min-width: 1200px) {
+    --grid__item: 3; 
+   }
 
 
 &:hover,
@@ -58,9 +93,6 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 }
 
 .portfolio__description{
-border-right: 1px solid #EEEEEE;
-border-left: 1px solid #EEEEEE;
-border-bottom: 1px solid #EEEEEE;
 padding: 20px 24px;
 }
 

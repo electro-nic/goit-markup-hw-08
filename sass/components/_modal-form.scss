@@ -2,20 +2,18 @@
   display: flex;
     justify-content: center;
   align-items: center;
-  height: 23px;
+  min-height: 23px;
   font-weight: 700;
 font-size: 20px;
 line-height: 1.15;
 text-align: center;
 letter-spacing: 0.03em;
 color: var(--text-color);
-padding: 0;
-margin: 0;
 margin-bottom: 12px;
 }
 
- .main-form__field:not(:last-of-type){
-   margin-bottom: 10px;
+ .main-form__field + .main-form__field{
+   margin-top: 10px;
  }
 
 .main-form__label{
@@ -87,17 +85,21 @@ letter-spacing: 0.01em;
   justify-content: center;
   align-items: center;
     margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 12px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: #757575;
+
+@media screen and (min-width: 1200px) {
+  font-size: 14px;
+line-height: 1.71;
+}
 }
 
 .checkbox__icon{
-  display: inline-block;
-  margin-right: 7px;
-  width: 16px;
-  height: 15px;
+  display: block;
+    min-width: 15px;
+  min-height: 15px;
   border: 2px solid var(--text-color);
   border-radius: 2px;
   transition: background-color var(--animation), background-image var(--animation);
@@ -112,11 +114,16 @@ color: #757575;
   }
 }
 
+.checkbox__text{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-left: 8px;
+}
 
 .checkbox__link{
-display: flex;
-  margin-left: 3px;
-  color: var(--accent-color);
+display: inline-flex;
+   color: var(--accent-color);
 }
 
 .main-form__submit{
@@ -126,6 +133,7 @@ display: flex;
   margin-right: auto;
   margin-left: auto;
   padding: 0;
+  margin-top: 0;
   transition: background-color var(--animation);
 
 &:hover,
