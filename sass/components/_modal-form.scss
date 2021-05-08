@@ -1,0 +1,135 @@
+.main-form__title{
+  display: flex;
+    justify-content: center;
+  align-items: center;
+  height: 23px;
+  font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--text-color);
+padding: 0;
+margin: 0;
+margin-bottom: 12px;
+}
+
+ .main-form__field:not(:last-of-type){
+   margin-bottom: 10px;
+ }
+
+.main-form__label{
+   display: flex;
+   flex-direction: column;
+  position: relative;
+  margin: 0;
+padding: 0;
+  font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.01em;
+color: var(--main-text-color);
+}
+
+.main-form__input{
+      margin-top: 4px;
+   padding-left: 42px;
+   height: 40px;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+box-sizing: border-box;
+border-radius: 4px;
+transition: border var(--animation), outline var(--animation), color var(--animation);
+ 
+ .main-form__field:focus-within &{
+  border: 1px solid var(--accent-color);
+ outline: var(--accent-color);
+color: var(--accent-color);
+}
+}
+
+ .main-form__icon{
+ width: 18px;
+  height: 18px; 
+  position: absolute;
+top: 29px;
+left: 12px;
+fill: var(--text-color);
+transition: fill var(--animation);
+
+.main-form__field:focus-within &{
+ fill: var(--accent-color);
+}
+}
+
+ .main-form__input--comment{
+   height: 120px;
+   resize: none;
+   padding: 12px 16px;
+   margin-bottom: 20px;
+ 
+ &::placeholder{
+   font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.01em;
+color:rgba(117, 117, 117, 0.5);
+ }
+
+  &:not(:placeholder-shown) {
+  font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.01em;
+}
+ }
+
+.checkbox__label{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    margin-bottom: 30px;
+  font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: #757575;
+}
+
+.checkbox__icon{
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--text-color);
+  border-radius: 2px;
+  transition: background-color var(--animation), background-image var(--animation);
+
+.checkbox__input:checked + &{
+  background-color: var(--accent-color);
+  background-image: url(../images/svg/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+  display: inline-block;
+  }
+}
+
+
+.checkbox__link{
+display: flex;
+  margin-left: 3px;
+  color: var(--accent-color);
+}
+
+.main-form__submit{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  transition: background-color var(--animation);
+
+&:hover,
+&:focus{
+  background-color: #188CE8;
+}
+}

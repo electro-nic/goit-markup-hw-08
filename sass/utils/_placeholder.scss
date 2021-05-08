@@ -1,0 +1,26 @@
+%section-padding {
+  padding-bottom: 94px;
+}
+
+
+%title-text{
+font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+color: var(--text-color);
+margin-bottom: 50px;
+}
+
+%footer-grid {
+flex-basis: calc((50% - 45px) / 2);
+}
+
+%footer-title {
+display: flex;
+line-height: 1.14;
+text-transform: uppercase;
+color: var(--light-text-color);
+margin-bottom: 20px;
+font-size: 14px;
+}

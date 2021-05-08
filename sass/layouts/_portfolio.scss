@@ -1,0 +1,108 @@
+.portfolio{
+  padding-top:94px;
+  @extend %section-padding;
+}
+
+/*buttons*/
+.portfolio__button-list{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio__button-item {
+  margin-right: 8px;
+}
+
+.portfolio__button-item:last-child{
+  margin-right: 0;
+}
+
+.portfolio__button{
+min-width: 73px;
+padding: 6px 22px;
+border-radius: 4px;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
+text-align: center;
+color: var(--text-color);
+background-color: var(--filter-button-color);
+border-color: transparent;
+transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
+
+&:hover,
+&:focus{
+color: var(--light-text-color);
+background-color: var(--accent-color);
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+}
+
+/*portfolio-cards*/
+.portfolio__item{
+  cursor: pointer;
+  flex-wrap: wrap;
+  transition: box-shadow var(--animation);
+   --grid__item: 3;
+
+
+&:hover,
+&:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+  &:hover .portfolio__overlay{
+  transform: translateY(0);
+  }
+}
+
+.portfolio__description{
+border-right: 1px solid #EEEEEE;
+border-left: 1px solid #EEEEEE;
+border-bottom: 1px solid #EEEEEE;
+padding: 20px 24px;
+}
+
+.portfolio__title{
+  margin-bottom: 4px;
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+color: var(--text-color);
+}
+
+.portfolio__label{
+  margin-bottom: 0px;
+font-size: 16px;
+line-height: 1.87;
+color: var(--main-text-color);
+}
+
+/*portfolio-overlay*/
+
+.portfolio__thumb{
+  position: relative;
+  overflow: hidden;
+  }
+
+  .portfolio__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform var(--animation);
+    background-color: rgba(33,150,243,0.9);
+  }
+
+  .portfolio__overlay--text{
+  margin-bottom: 0;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color:var(--light-text-color); 
+  }

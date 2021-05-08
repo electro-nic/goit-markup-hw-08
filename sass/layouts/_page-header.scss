@@ -1,0 +1,9 @@
+.page-header {
+ border-bottom: 1px solid var(--light-bg-color);
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  }

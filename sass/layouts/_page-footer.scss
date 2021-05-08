@@ -1,0 +1,36 @@
+.page-footer{
+  padding-top: 60px;
+  padding-bottom: 60px;
+background-color: var(--dark-bg-color);
+}
+
+.page-footer__container {
+  display: flex;
+  justify-content: space-between;
+  }
+
+.page-footer__link{
+ display: inline-block;
+  transition: color var(--animation);
+
+&:not(:last-of-type) {
+  margin-bottom: 9px;
+}
+
+&:focus,
+&:hover{
+color: var(--accent-color);
+}
+}
+
+.page-footer__link--map{
+color: var(--light-text-color);
+}
+
+.page-footer__link--info{
+color: rgba(255, 255, 255, 0.6);
+}
+
+.page-footer__information{
+  @extend %footer-grid;
+}

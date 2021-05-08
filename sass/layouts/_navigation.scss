@@ -1,0 +1,68 @@
+.nav {
+display: inline-flex;
+align-items: center;
+margin-right: auto;
+color: var(--text-color);
+}
+
+.nav__list{
+display: flex;
+font-weight: 500;
+line-height: 1.14;
+letter-spacing: 0.02em;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color var(--animation);
+
+&:focus,
+&:hover{
+color: var(--accent-color);
+}
+}
+
+.nav__link--dark{
+color: var(--text-color);
+}
+
+.nav__link--current {
+color: var(--accent-color); 
+}
+
+.nav__link--current{
+  position: relative;
+
+&::after{
+  position: absolute;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  bottom: -1px;
+  background-color: var(--accent-color);
+}
+}
+
+.nav__icon--mail{
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.nav__icon--phone{
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}

@@ -1,0 +1,36 @@
+.service{
+  @extend %section-padding;
+}
+
+.service__title{
+@extend %title-text;
+}
+
+.service__thumb{
+  position: relative;
+}
+
+.service__label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47,48,58,0.8);
+}
+
+.service__text{
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--light-text-color);
+}
+
+.service__item {
+  --grid__item: 3;
+}
